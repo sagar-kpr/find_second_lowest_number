@@ -1,0 +1,19 @@
+#second lowest nbr in list
+
+def second_small(arr):
+    first_low=arr[0]
+    for i in range(len(arr)):
+        if arr[i] < first_low :
+            first_low=arr[i]
+    second_low=arr[0]        
+    for i in range(len(arr)):
+        if arr[i] < second_low :
+            if arr[i] != first_low :
+                second_low=arr[i]
+    return second_low            
+    
+
+n=int(input())
+arr=[int(i) for i in input().split()]
+ans=second_small(arr)
+print(ans)
